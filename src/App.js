@@ -10,7 +10,7 @@ function App() {
   const [currentAccount, setCurrentAccount] = useState(null);
 
   // 合约交互相关
-  const [scBalance, depositNum] = useState(null);
+  const [scBalance] = useState(null);
 
 
   // 连接钱包按钮UI渲染
@@ -119,7 +119,7 @@ function App() {
   // Step3. 提交质押的StarCoin数量到合约
   const handleSubmit = evt => {
 
-    
+
     evt.preventDefault();
   }
 
