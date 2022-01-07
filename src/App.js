@@ -111,13 +111,16 @@ function App() {
   }
 
   // Step2. 捕获质押的数量
-  const handleChange = () => {
-
+  const handleChange = evt => {
+    // 可以直接捕获value
+    console.log(evt.target.value);
   }
 
   // Step3. 提交质押的StarCoin数量到合约
-  const handleSubmit = () => {
+  const handleSubmit = evt => {
 
+    
+    evt.preventDefault();
   }
 
   // Step4. 跟lottery合约交互，拿到是否存活的结果，并在前端显示
@@ -133,7 +136,8 @@ function App() {
   const deposit = () => {
     return (
       <form onSubmit={handleSubmit}>
-        <input type="number" value={depositNum} onChange={handleChange} />
+        {/* <input type="number" value={depositNum} onChange={handleChange} /> */}
+        <input type="number" onChange={handleChange} />
         <input type="submit" value="Deposit"/>
       </form>
     )
